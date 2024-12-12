@@ -1,6 +1,5 @@
-﻿using System;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 namespace Examen_Mvvm.ViewModels
 {
     internal class Examen_MvvmViewModels : ObservableObject
@@ -34,7 +33,7 @@ namespace Examen_Mvvm.ViewModels
 
             try
             {
-                if (totalSumaProductos >= 0 && totalSumaProductos <=999.99)
+                if (totalSumaProductos >= 0 && totalSumaProductos <= 999.99)
                 {
                     descuento = 0;
                 }
@@ -42,11 +41,11 @@ namespace Examen_Mvvm.ViewModels
                 {
                     descuento = totalSumaProductos * 0.10;
                 }
-                else if(totalSumaProductos >= 5000 && totalSumaProductos <= 9999.99)
+                else if (totalSumaProductos >= 5000 && totalSumaProductos <= 9999.99)
                 {
                     descuento = totalSumaProductos * 0.0;
                 }
-                else if(totalSumaProductos >= 10000)
+                else if (totalSumaProductos >= 10000)
                 {
                     descuento = totalSumaProductos * 0.30;
                 }
@@ -55,18 +54,17 @@ namespace Examen_Mvvm.ViewModels
             {
                 Alerta("ERROR", ex.Message);
             }
+        }
 
-            [RelayCommand]
-            private void Limpiar()
-            {
-                producto1 = 0;
-                producto2 = 0;
-                producto3 = 0;
-                descuento = 0;
-                subTotal = 0;
-                totalPagar = 0;
-
-            }
+        [RelayCommand]
+        private void Limpiar()
+        {
+            producto1 = 0;
+            producto2 = 0;
+            producto3 = 0;
+            descuento = 0;
+            subTotal = 0;
+            totalPagar = 0;
         }
     }
 }
