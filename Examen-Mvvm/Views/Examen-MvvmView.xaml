@@ -15,10 +15,16 @@
             <Label Text="Ingrese Producto3:" />
             <Entry Text="{Binding Producto3}" Keyboard="Numeric" />
 
-            <Label Text="IMC:" />
-            <Entry Text="{Binding Resultado}" IsReadOnly="True" />
+            <Label Text="Descuento:" />
+            <Entry Text="{Binding Descuento}" IsReadOnly="True" />
 
-            <Button Text="Calcular" Command="{Binding CalcularCommand}" BackgroundColor="Green" />
+        <Label Text="SubTotal:" />
+        <Entry Text="{Binding SubTotal}" IsReadOnly="True" />
+
+        <Label Text="Total:" />
+        <Entry Text="{Binding TotalPagar}" IsReadOnly="True" />
+
+        <Button Text="Calcular" Command="{Binding CalcularCommand}" BackgroundColor="Green" />
             <Button Text="Limpiar" Command="{Binding LimpiarCommand}" BackgroundColor="Red" />
     </VerticalStackLayout>
 </ContentView>
