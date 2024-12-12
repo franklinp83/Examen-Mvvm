@@ -4,7 +4,7 @@
              x:Class="Examen_Mvvm.Views.Examen_MvvmView"
              xmlns:viewModel="clr-namespace:Examen_Mvvm.ViewModels"
              x:DataType="viewModel:Examen_MvvmViewModels"
-             Title="Indice de masa corporal">
+             Title="Calcular Decuento">
     <VerticalStackLayout>
         <Label Text="Ingrese Producto1:" />
             <Entry Text="{Binding Producto1}" Keyboard="Numeric" />
