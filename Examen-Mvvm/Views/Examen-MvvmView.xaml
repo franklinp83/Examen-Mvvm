@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Examen_Mvvm.Views.Examen_MvvmView">
+             x:Class="Examen_Mvvm.Views.Examen_MvvmView"
+             xmlns:viewModel="clr-namespace:Examen_Mvvm.ViewModels"
+             x:DataType="viewModel:Examen_MvvmViewModels"
+             Title="Indice de masa corporal">>
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="Ingrese Producto1:" />
+            <Entry Text="{Binding Producto1}" Keyboard="Numeric" />
+
+            <Label Text="Ingrese Producto2:" />
+            <Entry Text="{Binding Producto2}" Keyboard="Numeric" />
+
+            <Label Text="Ingrese Producto3:" />
+            <Entry Text="{Binding Producto3}" Keyboard="Numeric" />
+
+            <Label Text="IMC:" />
+            <Entry Text="{Binding Resultado}" IsReadOnly="True" />
+
+            <Button Text="Calcular" Command="{Binding CalcularCommand}" BackgroundColor="Green" />
+            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" BackgroundColor="Red" />
     </VerticalStackLayout>
 </ContentView>
